@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* NEUTRAL */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lt-gray: hsl(270, 3%, 87%);
+    --clr-dk-gray:  hsl(279, 6%, 55%);
+    --clr-dk-vlt: hsl(278, 68%, 11%);
+    /* ERROR */
+    --clr-red: hsl(0, 100%, 66%);
+
+    /* FONTS */
+    --ff-spce: 'Space Grotesk', sans-serif;
+}
+
+body {
+    font-family: var(--ff-spce);
+}
+
+/* HEADER SECTION */
+
+header {
+    height: 30vh;
+    background: url(images/bg-card-back.png) center right 10%, url(images/bg-main-mobile.png) center top;
+    background-repeat: no-repeat;
+    background-size: 275px, 100%;
+}
+
+div.card-front {
+    margin-left: 5%;
+}
+
+
+img.card-face {
+    height: 175px;
+    margin-top: 20%;
+}
+
+div.card-details {
+    color: var(--clr-white);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    padding-left: 20px;
+    padding-top: 20px;
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    margin-top: -180px;
+    margin-left: 10px;
+}
+
+span.zero-span {
+    margin-left: 75px;
+}
+
+img.card-logo {
+    height: 70px;
+    width: 70px;
+}
+
+div.card-back {
+    display: none;
+}
+
+
+/* FORM SECTION */
+
+section {
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    height: 50vh;
+}
+
+div.input-name {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+div.input-name input {
+    height: 60px;
+    width: 100%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+div.input-number {
+    margin-top: 5%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+div.input-number input {
+    height: 60px;
+    width: 100%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+div.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
+    margin-top: 5%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+div.card-info input {
+    height: 60px;
+    width: 95%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+label.date {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+label.cvc-digits {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+input::placeholder {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+button.submit-btn {
+    font-size: 25px;
+    color: var(--clr-white);
+    background-color: #0b0b31;
+    border-radius: 10px;
+    margin-top: 10%;
+    width: 100%;
+    height: 70px;
+}
+
+a.confirm {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+/* THANK YOU PAGE */
+
+div.thank-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.thank-you img {
+    height: 130px;
+}
+
+div.thank-you h2 {
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+div.thank-you p {
+    color: var(--clr-dk-gray);
+    font-size: 22px;
+}
+
+/* ERROR */
+
+div.error-msg {
+    color: var(--clr-red);
+    font-size: 16px;
+}
+
+@media(min-width: 760px) {
+
+    div.card-front {
+        margin-left: 20%;
+        margin-right: auto;
+    }
+
+}
+
+@media(min-width: 1280px) {
+
+    div.main-container {
+        display: flex;
+    }
+
+    header {
+        height: 100vh;
+        width: 40%;
+        background-image: url(images/bg-main-desktop.png);
+        background-size: 55vh 100vh;
+        background-position: left;    
+    }
+
+    div.card-front {
+        margin-top: 40%;
+        margin-left: 30%;
+    }
+    
+    img.card-face {
+        width: 350px;
+        height: auto;
+        margin-top: -50px;
+        margin-left: 70px;
+    }
+    
+    div.card-details {
+       margin-top: -190px;
+       margin-left: 95px;
+    }
+
+    div.card-back {
+        display: block;
+        margin-top: 10%;
+        margin-left: 40%;
+    }
+
+    div.card-back img {
+        width: 350px;
+        height: auto;
+    }
+
+    section {
+        width: 60%;
+        display: grid;
+        position: relative;
+    }
+
+    #form {
+        width: 50%;
+        justify-self: center;
+        margin-left: -20%;
+    }
+
+    section.form-submitted {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.thank-you {
+        max-width: 50%;
+    }
+    
+    }

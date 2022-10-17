@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+<div class="main-container">
+    <header>
+
+      <div class="card-front">
+            <img class="card-face" src="images/bg-card-front.png" alt="Credit card front face blank">
+          
+
+          <div class="card-details">
+            <img class="card-logo" src="images/card-logo.svg" alt="">
+            <h2 class="card-text">0000 0000 0000 0000</h2>
+            <p class="card-text">JANE APPLESEED  <span class="zero-span card-text">00/00</span></p>
+        </div>
+
+        <div class="card-back">
+          <img src="images/bg-card-back.png" alt="credit card back face blank">
+        </div>
+
+      </div>
+
+    </header>
+
+    <section class="card-form">
+
+      <form id="form" action="" method="">
+
+        <div class="form-container">
+
+          <div class="input-name">
+              <label for="holderName">CARDHOLDER NAME</label>
+              <br>
+              <input id="holderName" type="text" placeholder="e.g JANE APPLESEED">
+              <div class="error-msg" id="name-error"></div>
+          </div>
+
+          <div class="input-number">
+              <label for="cardNumber">CARD NUMBER</label>
+              <br>
+              <input id="cardNumber" type="text" placeholder="e.g 1234 5678 9101 1213">
+              <div class="error-msg" id="number-error"></div>
+          </div>
+
+          <div class="card-info">
+            <label class="date" for="expDate">EXP. DATE</label>
+            <input id="expDate" type="text" placeholder="e.g MM/YY">
+            <label class="cvc-digits" for="cvc">CVC</label>
+            <input id="cvc" type="text" placeholder="e.g 123">
+            <div class="error-msg" id="info-error"></div>
+          </div>
+
+        </div>
+            <button class="submit-btn" type="submit"> <a class="confirm" href="thank-you.html">Confirm</a></button>
+      </form>
+
+    </section>
+
+</div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
