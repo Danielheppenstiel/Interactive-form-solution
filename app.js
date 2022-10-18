@@ -8,7 +8,7 @@ const nameError = document.getElementById('name-error');
 const numberError = document.getElementById('number-error');
 const infoError = document.getElementById('info-error');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('click', (e) => {
     let nameMessages = [];
     let numberMessages = [];
     let infoMessages = [];
